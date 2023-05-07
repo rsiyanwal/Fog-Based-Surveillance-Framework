@@ -6,9 +6,13 @@ This IoT architecture utilizes energy-efficient and low-latency devices to monit
   <figcaption>Flow Diagram of Fog-based Surveillance Framwork; by Rahul Siyanwal</figcaption>
 </figure>
 
-## Preprequisites
 
 ## Framework
+
+### Preprequisites
+1. Get familier with [Apache Kafka](https://github.com/rsiyanwal/Apache-Kafka-Basics), [ESP-NOW](https://randomnerdtutorials.com/esp-now-esp8266-nodemcu-arduino-ide/), and [MQTT](https://randomnerdtutorials.com/what-is-mqtt-and-how-it-works/).
+2. The architecture requires [Soft Access Point](https://github.com/rsiyanwal/ESP8266-as-SoftAP) and [MAC address](https://github.com/rsiyanwal/NodeMCU-MAC-Address) of the devices that are using ESP-NOW protocol. We used ESP8266 as the device for creating that network. 
+3. Using the [simulation](https://github.com/rsiyanwal/iFogSim-Simulations-for-Fog-Based-Surviliance-Architecture), you can identify the most suitable devices for your architecture based on your specific requirements such as latency, energy consumption, and cost.
 
 The explanation of the diagram is as follow:
 
