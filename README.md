@@ -14,7 +14,10 @@ This IoT architecture utilizes energy-efficient and low-latency devices to monit
 2. The architecture requires [Soft Access Point](https://github.com/rsiyanwal/ESP8266-as-SoftAP) and [MAC address](https://github.com/rsiyanwal/NodeMCU-MAC-Address) of the devices that are using ESP-NOW protocol. We used ESP8266 as the device for creating that network. 
 3. Using the [simulation](https://github.com/rsiyanwal/iFogSim-Simulations-for-Fog-Based-Surviliance-Architecture), you can identify the most suitable devices for your architecture based on your specific requirements such as latency, energy consumption, and cost.
 
-The explanation of the diagram is as follow:
+### Modules
+
+![Module-Mapping-3](https://user-images.githubusercontent.com/11557572/236669425-7506a355-7a7f-48b2-bb17-483b0a258401.png)</br>
+_(Module Mapping; [Rahul Siyanwal](https://github.com/rsiyanwal/))_
 
 | Number | Module | Short Description | 
 | ------------- | ------ | ----------------- | 
@@ -23,7 +26,7 @@ The explanation of the diagram is as follow:
 | III | [MSD-ESPNOW-MQTT-Forwarder](https://github.com/rsiyanwal/ESPNOW-and-MQTT) | Forwarding MSD to a device for processing via MQTT | 
 | IV | [Servo-Image-Module](https://github.com/rsiyanwal/MQTT-Servo-Camera) | Adjusting the angle of servo motor in the direction where MSD is detected | |
 | V | [Picture-Capture](https://github.com/rsiyanwal/MQTT-Servo-Camera) | Clicking an image in the direction of MSD | |
-| VI | Image-Processing | Preprocessing the Image | |
+| VI | Image-Processing | Preprocessing the Image / Run your own model |
 | VII | [Image-Producer](https://github.com/rsiyanwal/Apache-Kafka-Transfer-Images) | Producing the Image via Kafka | |
 | VIII | [Image-Broker](https://www.conduktor.io/kafka/starting-kafka/) | Kafka Broker | |
 | IX | [Image-Consumer](https://github.com/rsiyanwal/Apache-Kafka-Transfer-Images) | Consuming the Image via End-User | |
