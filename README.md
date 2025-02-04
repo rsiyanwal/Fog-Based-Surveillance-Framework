@@ -32,3 +32,18 @@ _(Module Mapping; [Rahul Siyanwal](https://github.com/rsiyanwal/))_
 | IX | [Image-Consumer](https://github.com/rsiyanwal/Apache-Kafka-Transfer-Images) | Consuming the Image via End-User | |
 
 The architecture consists of several modules: Motion-Capture, MSD-ESP-Sender, MSD-ESPNOW-MQTT-Forwarder, Servo-Image-Module, Picture-Capture, Image-Processing, Image-Producer, Image-Broker, and Image-Consumer. The Motion-Capture module uses PIR sensors to detect motion and the MSD-ESP-Sender module sends Motion Sensor Data (MSD) to another NodeMCU connected to APU via ESP-NOW. To forward the MSD packets to the microprocessor, which does not support ESP-NOW, the MSD-ESPNOW-MQTT-Forwarder module uses the MQTT protocol. Once the Servo-Image-Module rotates the camera toward the MSU that sent the MSD, the Picture-Capture module captures the image. After storing and processing the image, the Image-Producer module sends it to the broker using Apache Kafka. The Image-Broker module handles the broker, and the Image-Consumer module receives the image on the subscribed topic on the consumer device.
+
+Cite this work:
+@article{SIYANWAL2025101070,
+title = {An energy efficient fog-based internet of things framework to combat wildlife poaching},
+journal = {Sustainable Computing: Informatics and Systems},
+volume = {45},
+pages = {101070},
+year = {2025},
+issn = {2210-5379},
+doi = {https://doi.org/10.1016/j.suscom.2024.101070},
+url = {https://www.sciencedirect.com/science/article/pii/S221053792400115X},
+author = {Rahul Siyanwal and Arun Agarwal and Satish Narayana Srirama},
+keywords = {Energy efficient wildlife monitoring, Internet of things, Fog computing, Sustainability, Distributed edge analytics, Simulation},
+abstract = {Wildlife trafficking, a significant global issue driven by unsubstantiated medical claims and predatory lifestyle that can lead to zoonotic diseases, involves the illegal trade of endangered and protected species. While IoT-based solutions exist to make wildlife monitoring more widespread and precise, they come with trade-offs. For instance, UAVs cover large areas but cannot detect poaching in real-time once their power is drained. Similarly, using RFID collars on all wildlife is impractical. The wildlife monitoring system should be expeditious, vigilant, and efficient. Therefore, we propose a scalable, motion-sensitive IoT-based wildlife monitoring framework that leverages distributed edge analytics and fog computing, requiring no animal contact. The framework includes 1. Motion Sensing Units (MSUs), 2. Actuating and Processing Units (APUs) containing a camera, a processing unit (such as a single-board computer), and a servo motor, and 3. Hub containing a processing unit. For communication across these components, ESP-NOW, Apache Kafka, and MQTT were employed. Tailored applications (e.g. rare species detection utilizing ML) can then be deployed on these components. This paper details the framework’s implementation, validated through tests in semi-forest and dense forest environments. The system achieved real-time monitoring, defined as a procedure of detecting motion, turning the camera, capturing an image, and transmitting it to the Hub. We also provide a detailed model for implementing the framework, supported by 2800 simulated architectures. These simulations optimize device selection for wildlife monitoring based on latency, cost, and energy consumption, contributing to conservation efforts.}
+}
